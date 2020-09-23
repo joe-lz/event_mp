@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, Button, Text } from "@tarojs/components";
 import { observer, inject } from "mobx-react";
-
 import "./index.scss";
 
 type PageStateProps = {
@@ -32,32 +31,23 @@ class Index extends Component {
 
   componentDidHide() {}
 
-  increment = () => {
-    const { counterStore } = this.props.store;
-    counterStore.increment();
-  };
+  // increment = () => {
+  //   const { counterStore } = this.props.store
+  //   counterStore.increment()
+  // }
 
-  decrement = () => {
-    const { counterStore } = this.props.store;
-    counterStore.decrement();
-  };
-
-  incrementAsync = () => {
-    const { counterStore } = this.props.store;
-    counterStore.incrementAsync();
-  };
+  // decrement = () => {
+  //   const { counterStore } = this.props.store
+  //   counterStore.decrement()
+  // }
 
   render() {
     const {
       counterStore: { counter }
     } = this.props.store;
     return (
-      <View className='index'>
-        {/* <Button type="primary">按钮</Button>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text> */}
+      <View className="index">
+        <Button open-type='feedback'>意见反馈</Button>
       </View>
     );
   }

@@ -1,0 +1,12 @@
+@import '../css/variable.scss';
+
+.index {
+  min-height: 100vh;
+  background-color: $bg_color;
+}
+
+@media (prefers-color-scheme: dark) {
+  .index {
+    background-color: $dark_bg_color;
+  }
+}
